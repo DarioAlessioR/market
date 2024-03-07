@@ -2,9 +2,11 @@
 
 <% @products.each do |product| %>
   <div>
-    <h2><%= product.title %></h2>
-    <p><%= product.description %></p>
-    <p><%= product.price %></p>
+    <%= link_to product_path(product) do %>
+      <h2><%= product.title %></h2>
+      <p><%= product.description %></p>
+      <p><%= product.price %></p>
+    <% end %>
   </div>
 <% end %>
 
