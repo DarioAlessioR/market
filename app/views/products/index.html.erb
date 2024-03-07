@@ -1,7 +1,11 @@
 <h1>Products:<h1>
 
-<%= 1 + 1 %>
-<br>
-<%= Date.today %>
+<% @products.each do |product| %>
+  <div>
+    <h2><%= product.title %></h2>
+    <p><%= product.description %></p>
+    <p><%= product.price %></p>
+  </div>
+<% end %>
 
 
